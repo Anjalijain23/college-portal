@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Login</title>
+  <style>
+    :root{
+      --bg1: #0f2a2a;
+      --bg2: #173b3b;
+      --card: #ffffff;
+      --muted: #9aa3a3;
+      --accent-start: #0b1f2b;
+      --accent-end: #11333f;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at 10% 10%, rgba(255,255,255,0.02), transparent 10%),
+                  linear-gradient(180deg, var(--bg1), var(--bg2));
+      color:#0f1720;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .center-wrap{
+      min-height:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:40px 20px;
+      box-sizing:border-box;
+    }
+
+    .card {
+      width: 420px;
+      max-width: calc(100% - 32px);
+      background: var(--card);
+      border-radius: 14px;
+      box-shadow: 0 14px 40px rgba(3,22,26,0.45);
+      padding: 34px;
+      box-sizing: border-box;
+    }
+
+    .heading { text-align:center; margin:20px 0; }
+    .heading h2 { margin:0; font-size:20px; color:#123136; }
+
+    form { display:flex; flex-direction:column; gap:14px; }
+
+    label { font-size:12px; color:var(--muted); margin-left:2px; }
+    input[type="text"], input[type="password"] {
+      height:44px; padding:10px 14px; border-radius:10px;
+      border:1px solid #e6e9e9; font-size:14px; outline:none;
+    }
+    input:focus { border-color:#aac8c8; box-shadow:0 6px 18px rgba(10,80,80,0.06); }
+
+    .btn-login {
+      margin-top:6px; height:48px; border-radius:12px; border:none;
+      cursor:pointer; font-weight:600; font-size:15px; letter-spacing:0.6px;
+      background:linear-gradient(90deg, var(--accent-start), var(--accent-end));
+      color:#fff; box-shadow:0 8px 20px rgba(8,30,34,0.25);
+    }
+
+    .forgot {
+      text-align:center;
+      margin-top:10px;
+      font-size:13px;
+    }
+    .forgot a {
+      color:#0f6b6b;
+      text-decoration:none;
+      font-weight:600;
+    }
+  </style>
+</head>
+<body>
+  <div class="center-wrap">
+    <div class="card">
+
+      <div class="heading">
+        <h2>STUDENT LOGIN</h2>
+      </div>
+
+      <form method="post" action="login.php">
+        <div class="input-group">
+          <label for="username">Username</label>
+          <input id="username" name="username" type="text" placeholder="Enter username" required />
+        </div>
+
+        <div class="input-group">
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" placeholder="Enter password" required />
+        </div>
+
+        <button type="submit" class="btn-login">Login</button>
+      </form>
+
+      <!-- 👇 Ye part important hai -->
+      <div class="forgot">
+        <a href="#">Forgot password?</a><br>
+        <a href="student-signupPage.html">Create a new account</a>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

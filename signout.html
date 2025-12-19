@@ -1,0 +1,80 @@
+<?php
+session_start();
+session_unset();
+session_destroy();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Signed Out</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(120deg, #2b001f, #1a001f);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+
+    .box {
+      background: rgba(255, 255, 255, 0.08);
+      padding: 40px 35px;
+      width: 420px;
+      text-align: center;
+      border-radius: 18px;
+      box-shadow: 0 0 18px rgba(0,0,0,0.4);
+      backdrop-filter: blur(6px);
+      animation: pop 0.5s ease;
+    }
+
+    @keyframes pop {
+      0% {transform: scale(0.8); opacity: 0;}
+      100% {transform: scale(1); opacity: 1;}
+    }
+
+    h2 {
+      font-size: 32px;
+      color: #ffb3ff;
+      margin-bottom: 12px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: #e6cfea;
+    }
+
+    .btn {
+      background: linear-gradient(90deg, #ff00cc, #ff66ff);
+      padding: 12px 26px;
+      border: none;
+      color: white;
+      font-size: 18px;
+      border-radius: 28px;
+      cursor: pointer;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .btn:hover {
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box">
+    <h2>Signed Out Successfully</h2>
+    <p>Thank you for using our platform. See you soon!</p>
+    <a href="student-loginPage.html" class="btn">Back to Login</a>
+  </div>
+
+</body>
+</html>
